@@ -87,6 +87,7 @@ a {
 .synopsis-section h2 {
   color: #d2d1d1;
   font-weight: 800;
+  font-family: "Roboto", sans-serif;
 }
 
 .synopsis-section p {
@@ -94,6 +95,7 @@ a {
   font-size: 1.2rem;
   line-height: 1.7;
   font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
 
 /* NAV */
