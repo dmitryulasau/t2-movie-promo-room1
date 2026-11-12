@@ -52,6 +52,7 @@ a {
 }
 
 /* SYNOPSIS SECTION */
+
 .synopsis-section {
   display: flex;
   flex-direction: row;
@@ -66,7 +67,6 @@ a {
 .synopsis-image {
   flex: 0 0 44%;
   padding: 20px;
-
 }
 
 .synopsis-image img {
@@ -82,7 +82,6 @@ a {
   min-width: 0;
   margin: 0;
   padding: 40px;
-
 }
 
 .synopsis-section h2 {
