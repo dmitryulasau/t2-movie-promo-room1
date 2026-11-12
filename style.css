@@ -53,10 +53,10 @@ a {
 
 /* SYNOPSIS SECTION */
 .synopsis-section {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   align-content: center;
-  gap: clamp(1.5rem, 5vw, 5rem);    
+  gap: clamp(1.5rem, 5vw, 5rem);
   width: 85vw;
   height: auto;
   min-height: 20vh;
@@ -66,7 +66,7 @@ a {
 .synopsis-image {
   flex: 0 0 44%;
   padding: 20px;
- 
+
 }
 
 .synopsis-image img {
@@ -82,7 +82,7 @@ a {
   min-width: 0;
   margin: 0;
   padding: 40px;
-  
+
 }
 
 .synopsis-section h2 {
@@ -92,7 +92,7 @@ a {
 
 .synopsis-section p {
   color: #d2d1d1;
-  font-size:  1.2rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   font-weight: 400;
 }
@@ -144,14 +144,17 @@ a {
 .nav__link {
   transition: 0.3s ease;
 }
+
 .nav__link:hover {
   color: #990b22;
 }
+
 /* GALLERY */
 .gallery {
   padding: 80px 0;
   background-color: #050505;
 }
+
 .gallery__heading {
   margin-right: -100px;
   margin-bottom: 40px;
@@ -237,4 +240,84 @@ footer .social img {
   .hero {
     min-height: 40vh;
   }
+}
+
+/* Feature Cast */
+
+.cast {
+  padding: 80px 0;
+  margin-right: -100px;
+  text-align: center;
+  font-size: 80px;
+  letter-spacing: 100px;
+  color: #c8102e;
+  font-family: "Roboto", sans-serif;
+  background-color: #050505;
+}
+
+.cast-heading {
+  margin-right: -100px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 80px;
+  letter-spacing: 100px;
+  color: #c8102e;
+  font-family: "Roboto", sans-serif;
+}
+
+.cast-grid-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-right: 100px;
+  gap: 40px;
+}
+
+.actor_grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actor_grid-item img {
+  width: 150px;
+  height: 200px;
+  border: 2px solid #777c82;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.character-name {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #050505;
+  color: #ffffff;
+  padding: 10px 20px;
+  letter-spacing: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.actor-button {
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  line-height: normal;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #050505;
+  color: #ffffff;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-self: center;
+  transition: 0.3s ease;
+  letter-spacing: 0;
+  margin-top: -10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.actor-button:hover {
+  color: #990b22;
+  border-color: #990b22;
+  transform: scale(1.1);
 }
