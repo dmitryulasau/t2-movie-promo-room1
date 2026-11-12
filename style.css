@@ -38,7 +38,7 @@ a {
 /* HERO - Rashaad */
 .hero {
   min-height: 100vh;
-  background-color: #000;
+  background-color: #050505;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,8 +221,9 @@ a {
 
 /* FOOTER - Rashaad */
 footer {
-  background-color: #000;
+  background-color: #050505;
   padding: 32px 48px;
+  margin-right: 15vw;
 }
 
 footer .social {
