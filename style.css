@@ -52,7 +52,16 @@ a {
 }
 
 /* SYNOPSIS SECTION */
-
+.synopsis-section {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: clamp(1.5rem, 5vw, 5rem);
+  width: 100vw;
+  height: auto;
+  min-height: 20vh;
+  background-color: #050505;
+}
 
 .synopsis-image {
   flex: 0 0 44%;
