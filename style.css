@@ -1,4 +1,12 @@
 /* GENERAL SETUP */
+@font-face {
+  font-family: "Future Earth";
+  src: url(./fonts/future-earth.ttf);
+}
+
+html {
+  font-size: 62.5%;
+}
 
 * {
   box-sizing: border-box;
@@ -9,7 +17,10 @@
 body {
   min-height: 100vh;
   line-height: 1.5;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Future Earth,
+    Arial,
+    sans-serif;
   background-color: #050505;
 }
 
@@ -34,82 +45,22 @@ a {
   text-decoration: none;
 }
 
-/* STYLLING */
-
-/* HERO - Rashaad */
-.hero {
-  min-height: 100vh;
-  background-color: #050505;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px calc(15vw + 20px) 40px 40px;
-}
-
-.hero .title {
-  width: 100%;
-  max-width: 1100px;
-  height: auto;
-}
-
-/* SYNOPSIS SECTION */
-
-.synopsis-section {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  gap: clamp(1.5rem, 5vw, 5rem);
-  width: 100vw;
-  height: auto;
-  min-height: 20vh;
-  background-color: #050505;
-}
-
-.synopsis-image {
-  flex: 0 0 44%;
-  padding: 20px;
-}
-
-.synopsis-image img {
-  width: fit-content;
-  display: block;
-  height: 90%;
-  object-fit: cover;
-}
-
-.synopsis-text {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  margin: 0;
-  padding: 40px;
-}
-
-.synopsis-section h2 {
-  color: #d2d1d1;
-  font-weight: 800;
-  font-family: "Roboto", sans-serif;
-}
-
-.synopsis-section p {
-  color: #d2d1d1;
-  font-size: 1.2rem;
-  line-height: 1.7;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
-}
-
 /* NAV */
 .btn {
-  border: 1px solid #ffffff;
-  border-radius: 0;
-  font-size: 18px;
+  font-family:
+    Future Earth,
+    Arial,
+    sans-serif;
+  font-size: 2.4rem;
   font-weight: 700;
+  border: 1px solid #ffffff;
   background-color: #050505;
   color: #ffffff;
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
   cursor: pointer;
-  align-self: center;
   transition: 0.3s ease;
 }
 
@@ -122,10 +73,9 @@ a {
   flex-direction: column;
   background-color: #050505;
   color: #d9d9d9;
-  width: 15vw;
+  max-width: 15vw;
   min-height: 100vh;
-  padding: 80px 40px;
-
+  padding: 10vh 2vw 10vh 2vw;
   position: fixed;
   top: 0;
   right: 0;
@@ -138,7 +88,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 16px;
+  font-size: 4rem;
   text-align: right;
   justify-self: flex-end;
 }
@@ -149,6 +99,91 @@ a {
 
 .nav__link:hover {
   color: #990b22;
+}
+
+@media (max-width: 1600px) {
+  .btn {
+    font-size: 1.4rem;
+  }
+
+  .nav__list {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 1.4rem;
+  }
+
+  .nav__list {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav__list {
+    font-size: 2rem;
+  }
+}
+
+/* STYLLING */
+
+.main {
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HERO - Rashaad */
+
+.hero {
+  margin: 10vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 70vw;
+  width: 100%;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10vh;
+}
+
+/* SYNOPSIS SECTION */
+
+.container {
+  width: 100%;
+  padding: 2rem 20rem;
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
+.synopsis {
+  max-width: 85vw;
+  display: flex;
+  gap: 4rem;
+}
+
+.synopsis-image {
+  max-width: 40rem;
+}
+
+.synopsis-heading {
+  font-size: 4rem;
+  color: #d9d9d9;
+  margin-bottom: 1rem;
+}
+
+.synopsis-text {
+  color: #d9d9d9;
+  font-size: 2rem;
 }
 
 /* GALLERY */
@@ -164,7 +199,6 @@ a {
   font-size: 80px;
   letter-spacing: 100px;
   color: #c8102e;
-  font-family: "Roboto", sans-serif;
 }
 
 .gallery__list {
@@ -229,14 +263,18 @@ footer {
 }
 
 footer .social {
+  max-height: 40px;
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-footer .social img {
+/* footer .social img {
   width: 24px;
   height: 24px;
+} */
+.social__icon {
+  object-fit: cover;
 }
 
 @media (max-width: 480px) {
@@ -245,19 +283,14 @@ footer .social img {
   }
 }
 
-/* Feature Cast */
+/* CAST */
 
 .cast {
-  padding: 80px 0;
-  margin-right: -100px;
-  text-align: center;
-  font-size: 80px;
-  letter-spacing: 100px;
-  color: #c8102e;
-  font-family: "Roboto", sans-serif;
-  background-color: #050505;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
 }
-
 .cast-heading {
   margin-right: -100px;
   margin-bottom: 40px;
@@ -265,62 +298,75 @@ footer .social img {
   font-size: 80px;
   letter-spacing: 100px;
   color: #c8102e;
-  font-family: "Roboto", sans-serif;
 }
 
 .cast-grid-description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
-  margin: 0 auto;
-  padding-right: 100px;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 30rem);
+  gap: 4rem;
 }
-
 .actor_grid-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1rem;
+  background-color: #000000;
 }
 
-.actor_grid-item img {
-  width: 150px;
-  height: 200px;
-  border: 2px solid #777c82;
+.actor_grid-image img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  object-position: center;
+  margin-bottom: 1rem;
 }
 
 .character-name {
-  font-size: 20px;
-  font-weight: 700;
-  background-color: #050505;
-  color: #ffffff;
-  padding: 10px 20px;
-  letter-spacing: 0;
-  font-family: "Roboto", sans-serif;
+  color: #990b22;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .actor-button {
-  border: 1px solid #ffffff;
-  border-radius: 0;
-  line-height: normal;
-  font-size: 20px;
-  font-weight: 700;
-  background-color: #050505;
-  color: #ffffff;
-  padding: 10px 20px;
+  font-size: 2.8rem;
+  color: #d9d9d9;
+  text-align: center;
   cursor: pointer;
-  align-self: center;
-  transition: 0.3s ease;
-  letter-spacing: 0;
-  margin-top: -10px;
-  font-family: "Roboto", sans-serif;
 }
 
 .actor-button:hover {
   color: #990b22;
   border-color: #990b22;
   transform: scale(1.1);
+}
+
+.room1 {
+  color: #d9d9d9;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 15vw;
+  text-align: center;
+}
+
+/* TRAILER */
+
+.videos {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.video-container {
+  width: min(90%, 1000px);
+  margin: 3rem auto 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 2px solid #990b22;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
